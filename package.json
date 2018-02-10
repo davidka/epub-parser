@@ -1,5 +1,5 @@
 {
-  "name": "@gxl/epub-parser",
+  "name": "epub-parser",
   "version": "1.0.6",
   "description": "A powerful yet easy-to-use epub parser",
   "main": "build/lib/epubParser.js",
@@ -18,22 +18,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gaoxiaoliangz/epub-parser.git"
+    "url": "git+https://github.com/davidka/epub-parser.git"
   },
-  "keywords": [
-    "epub-parser",
-    "parser",
-    "epub",
-    "easy",
-    "book",
-    "file"
-  ],
+  "keywords": ["epub-parser", "parser", "epub", "easy", "book", "file"],
   "author": "gaoxiaoliangz",
+  "contributors": ["davidka"],
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/gaoxiaoliangz/epub-parser/issues"
+    "url": "https://github.com/davidka/epub-parser/issues"
   },
-  "homepage": "https://github.com/gaoxiaoliangz/epub-parser#readme",
+  "homepage": "https://github.com/davidka/epub-parser#readme",
   "dependencies": {
     "jsdom": "9.12.0",
     "lodash": "^4.17.2",
@@ -91,23 +85,11 @@
     "transform": {
       ".(ts|tsx)": "<rootDir>/node_modules/ts-jest/preprocessor.js"
     },
-    "setupFiles": [
-      "<rootDir>/config/polyfills.js"
-    ],
-    "testPathIgnorePatterns": [
-      "<rootDir>[/\\\\](build|docs|node_modules|scripts)[/\\\\]"
-    ],
-    "collectCoverageFrom": [
-      "src/**/*.{ts,tsx}"
-    ],
+    "setupFiles": ["<rootDir>/config/polyfills.js"],
+    "testPathIgnorePatterns": ["<rootDir>[/\\\\](build|docs|node_modules|scripts)[/\\\\]"],
+    "collectCoverageFrom": ["src/**/*.{ts,tsx}"],
     "testRegex": "(/__test__/.*|\\.(test|spec))\\.(ts|tsx)$",
-    "modulePaths": [
-      "src"
-    ],
-    "moduleFileExtensions": [
-      "ts",
-      "tsx",
-      "js"
-    ]
+    "modulePaths": ["src"],
+    "moduleFileExtensions": ["ts", "tsx", "js"]
   }
 }

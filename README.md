@@ -3,7 +3,7 @@
 > A powerful yet easy-to-use epub parser
 
 [![npm version](https://badge.fury.io/js/%40gxl%2Fepub-parser.svg)](https://badge.fury.io/js/%40gxl%2Fepub-parser)
-[![build state](https://api.travis-ci.org/gaoxiaoliangz/epub-parser.svg?branch=master)](https://travis-ci.org/gaoxiaoliangz/epub-parser)
+[![build state](https://api.travis-ci.org/davidka/epub-parser.svg?branch=master)](https://travis-ci.org/davidka/epub-parser)
 
 The package exports a simple parser function which use epub file as input and output JavaScript object.
 
@@ -11,43 +11,31 @@ As it is written in TypeScript, types are already included in the package.
 
 ## Install
 
-``` bash
-npm install @gxl/epub-parser --save
+```bash
+npm install davidka/epub-parser --save
 ```
+
 or if you prefer yarn
 
-``` bash
-yarn install @gxl/epub-parser
+```bash
+yarn add davidka/epub-parser
 ```
 
 ## Usage
 
 ```js
-import parser from '@gxl/epub-parser'
+import parser from 'davidka/epub-parser'
 // if you use `require` don't forget to add `.default`
 // const parser = require('simple-epub-parser').default
 
 console.log('epub content:', parser(binaryData))
-console.log('epub content:', parser('/path/to/file.epub', {
-  type: 'path'
-}))
 ```
 
-### parser(target: string | buffer, options?: object): EpubObject
+### parser(target: buffer, options?: object): EpubObject
 
 #### target
 
-type: `string` or `buffer`
-
-It can be the path to the file or file's binary string or buffer
-
-#### options
-
-type: `object`
-
-##### type(optional): 'binaryString' | 'path' | 'buffer'
-
-It forces the parser to treat supplied target as the defined type, if not defined the parser itself will decide how to treat the file (useful when you are not sure if the path is valid).
+type: `buffer`
 
 #### EpubObject
 
@@ -59,12 +47,12 @@ The output is an object which contains `structure`, `sections`, `info` along wit
 
 ### One more thing
 
-It provides some util functions as well. 
+It provides some util functions as well.
 
 They can be used via
 
 ```js
-import { parseLink, parseHTML, parseNestedObject, flattenArray } from '@gxl/epub-parser'
+import { parseLink, parseHTML, parseNestedObject, flattenArray } from 'davidka/epub-parser'
 ```
 
 * parseLink
