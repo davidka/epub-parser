@@ -9,6 +9,8 @@ The package exports a simple parser function which use epub file as input and ou
 
 As it is written in TypeScript, types are already included in the package.
 
+Inspired by [@gxl/epub-parser](https://www.npmjs.com/package/@gxl/epub-parser) but without dependency to `fs`, which allows it to use this lib with react-native.
+
 ## Install
 
 ```bash
@@ -58,8 +60,6 @@ import { parseLink, parseHTML, parseNestedObject, flattenArray } from 'davidka/e
 * parseLink
 * parseHTML
 * parseNestedObject
-
-Docs are coming soon ...
 
 ## How to contribute
 
