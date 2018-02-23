@@ -1,6 +1,6 @@
 {
   "name": "epub-parse",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "A powerful yet easy-to-use epub parser",
   "main": "build/lib/epubParser.js",
   "scripts": {
