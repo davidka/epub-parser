@@ -3,6 +3,7 @@ import _ from 'lodash'
 import nodeZip from 'node-zip'
 import parseLink from './parseLink'
 import parseSection, { Section } from './parseSection'
+import { GeneralObject } from './generalObject'
 
 const xmlParser = new xml2js.Parser()
 

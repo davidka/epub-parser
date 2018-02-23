@@ -3,8 +3,9 @@ import toMarkdown from 'to-markdown'
 import parseLink from './parseLink'
 import parseHTML from './parseHTML'
 import * as mdConverters from './mdConverters'
+import { HtmlNodeObject } from './htmlNodeObject'
 
-const isInternalUri = (uri) => {
+const isInternalUri = uri => {
   return uri.indexOf('http://') === -1 && uri.indexOf('https://') === -1
 }
 
@@ -41,7 +42,7 @@ export class Section {
 
   toHtmlObjects?() {
     return parseHTML(this.htmlString, {
-      resolveHref: (href) => {
+      resolveHref: href => {
         if (isInternalUri(href)) {
           const { hash } = parseLink(href)
           // todo: what if a link only contains hash part?
@@ -53,7 +54,7 @@ export class Section {
         }
         return href
       },
-      resolveSrc: (src) => {
+      resolveSrc: src => {
         if (isInternalUri(src)) {
           // todo: may have bugs
           const absolutePath = path.resolve('/', src).substr(1)

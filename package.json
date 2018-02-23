@@ -3,7 +3,6 @@
   "version": "1.0.7",
   "description": "A powerful yet easy-to-use epub parser",
   "main": "build/lib/epubParser.js",
-  "types": "build/types/index.d.ts",
   "scripts": {
     "build:types": "tsc --outDir build/js --declaration --declarationDir build/types",
     "prebuild": "npm run clean",
